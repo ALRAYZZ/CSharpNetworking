@@ -110,7 +110,7 @@ namespace TcpChatMessenger
 				{
 					// Send the mesage after an empty check and a "quit" check
 					byte[] msgBuffer = Encoding.UTF8.GetBytes(msg);
-					await _msgStream.WriteAsync(msgBuffer).ConfigureAwait(false); // Block until sent
+					await _msgStream!.WriteAsync(msgBuffer).ConfigureAwait(false); // Block until sent
 				}
 
 				if (IsDisconnected(_client))
