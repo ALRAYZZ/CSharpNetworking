@@ -226,7 +226,6 @@ namespace TcpChatServer
 			client.Close();
 		}
 
-
 		public static ChatServer? Chat;
 
 		private static void InterruptHandler(object? sender, ConsoleCancelEventArgs args)
