@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
+﻿using System.Net;
 using System.Net.Sockets;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace TcpChatServer
 {
@@ -25,8 +21,6 @@ namespace TcpChatServer
 		public bool Running { get; private set; }
 		// Buffer
 		public readonly int BufferSize = 2 * 1024; // 2KB
-
-
 
 		// Constructor, make a new TCP chat server with our provided name and port
 		public ChatServer(string chatName, int port)
@@ -139,7 +133,6 @@ namespace TcpChatServer
 				newClient.Close();
 			}
 		}
-
 		// Sees if any of the clients have disconnected
 		private void _checkForDisconnects()
 		{
@@ -200,7 +193,7 @@ namespace TcpChatServer
 				byte[] msgBuffer = Encoding.UTF8.GetBytes(msg); // Encode the message to bytes
 				foreach (TcpClient v in _viewers.ToArray()) // For each viewer, we send the message
 				{
-					v.GetStream().Write(msgBuffer, 0, msgBuffer.Length); // Send the message to the client
+					v.GetStream().Write(msgBuffer, 0, msgBuffer.Length); // Send the message to the viewers only
 				}
 			}
 
