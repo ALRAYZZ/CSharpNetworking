@@ -17,6 +17,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TcpSingleClientChatServer",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TcpSingleClientChatClient", "TcpSingleClientChatClient\TcpSingleClientChatClient.csproj", "{1771E027-BC9A-4260-84ED-3950188E41D8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TcpGamesServer", "TcpGamesServer\TcpGamesServer.csproj", "{AA578750-1C35-4A49-A929-0E8FED494770}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TcpGamesClient", "TcpGamesClient\TcpGamesClient.csproj", "{AC9A0970-CC2F-4B37-B2A1-5BD9BB6F1C00}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +55,14 @@ Global
 		{1771E027-BC9A-4260-84ED-3950188E41D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1771E027-BC9A-4260-84ED-3950188E41D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1771E027-BC9A-4260-84ED-3950188E41D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA578750-1C35-4A49-A929-0E8FED494770}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA578750-1C35-4A49-A929-0E8FED494770}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA578750-1C35-4A49-A929-0E8FED494770}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA578750-1C35-4A49-A929-0E8FED494770}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC9A0970-CC2F-4B37-B2A1-5BD9BB6F1C00}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC9A0970-CC2F-4B37-B2A1-5BD9BB6F1C00}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC9A0970-CC2F-4B37-B2A1-5BD9BB6F1C00}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC9A0970-CC2F-4B37-B2A1-5BD9BB6F1C00}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
