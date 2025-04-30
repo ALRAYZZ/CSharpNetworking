@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TcpGamesServer", "TcpGamesS
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TcpGamesClient", "TcpGamesClient\TcpGamesClient.csproj", "{AC9A0970-CC2F-4B37-B2A1-5BD9BB6F1C00}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TcpGames.Common", "TcpGames.Common\TcpGames.Common.csproj", "{1B90105C-1892-4319-B379-8595C8DDB1EE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{AC9A0970-CC2F-4B37-B2A1-5BD9BB6F1C00}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AC9A0970-CC2F-4B37-B2A1-5BD9BB6F1C00}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AC9A0970-CC2F-4B37-B2A1-5BD9BB6F1C00}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B90105C-1892-4319-B379-8595C8DDB1EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B90105C-1892-4319-B379-8595C8DDB1EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B90105C-1892-4319-B379-8595C8DDB1EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B90105C-1892-4319-B379-8595C8DDB1EE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
