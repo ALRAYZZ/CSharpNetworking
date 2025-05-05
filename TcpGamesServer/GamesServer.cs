@@ -222,17 +222,17 @@ namespace TcpGamesServer
 				// Read the length prefix (2 bytes)
 				byte[] lengthBytes = new byte[2];
 				int bytesRead = await stream.ReadAsync(lengthBytes, 0, lengthBytes.Length);
-				if (bytesRead !=2)
+				if (bytesRead != 2)
 				{
 					return null;
 				}
 
-				ushort packetLength = BitConverter.ToUInt16(lengthBytes, 0);
+				ushort packetLength = BitConverter.ToUInt16(lengthBytes, 0); // This contains the length as a ushort of the JSON packet
 
 				// Read JSON bytes
-				byte[] jsonBytes = new byte[packetLength];
-				bytesRead = await stream.ReadAsync(jsonBytes, 0, jsonBytes.Length);
-				if (bytesRead != packetLength)
+				byte[] jsonBytes = new byte[packetLength]; // We use here the length prefix received to create the array with the right size
+				bytesRead = await stream.ReadAsync(jsonBytes, 0, jsonBytes.Length); // We reuse the same variable to read the JSON bytes and confirm all bytes are read
+				if (bytesRead != packetLength) // If sizes don't match we return null since something went wrong
 				{
 					return null;
 				}
@@ -240,7 +240,7 @@ namespace TcpGamesServer
 				// Decode and deserialize the JSON
 				string jsonString = Encoding.UTF8.GetString(jsonBytes);
 				Packet packet = Packet.FromJson(jsonString);
-				return packet;
+				return packet; // The object deserialized where we can access the command and message properties
 			}
 			catch (Exception)
 			{
@@ -265,7 +265,6 @@ namespace TcpGamesServer
 			}
 			return false;
 		}
-
 		private bool IsDisconnected(TcpClient client)
 		{
 			try
