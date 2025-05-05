@@ -17,7 +17,7 @@ namespace TcpGames.Common
 
 		#region Functions
 		bool AddPlayer(TcpClient player);
-        void DiconnectClient(TcpClient client);
+        void DisconnectClient(TcpClient client);
         void Run();
 		#endregion Functions
 	}
